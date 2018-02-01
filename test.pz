@@ -1,0 +1,19 @@
+PRINT "hello"
+PRINT "hello, world"
+PRINT "hello" "world"
+PRINT ""
+PRINT 3
+PRINT (YIELD 3)
+PRINT (YIELD (YIELD (YIELD 5)))
+PRINT (+ 5 3)
+PRINT (- 5 3)
+PRINT (* 5 3)
+PRINT (/ 5 3)
+PRINT (+ (YIELD 5) (YIELD 3))
+PRINT (+ (/ 15 3) (- 120 (* 4 5)))
+#(DEFINE func (LIST x y z) (+ (+ x y) z))
+#(DEFINE proceed {
+#  (PRINT "began example procedure")
+#  (PRINT "ending example procedure")
+#})
+#(WAIT (WHERE (x == 1) (PASS proceed x)))
