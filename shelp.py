@@ -31,9 +31,16 @@ class Number(object):
     def div(terms):
         terms = list(terms)
         return terms[0].number / Number.mult(terms[1:])
+class Bool(object):
+    def __init__(self, value):
+        self.bool = True if value == 'true' else False
+    def __str__(self):
+        return 'true' if self.bool else 'false'
 def get(lemma):
     if lemma[0] == '"' and lemma[-1] == '"':
         return Text(lemma)
+    elif lemma == 'true' or lemma == 'false':
+        return Bool(lemma)
     else:
         return Number(lemma)
 def getItems(exp):

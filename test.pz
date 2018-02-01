@@ -11,6 +11,7 @@ PRINT (* 5 3)
 PRINT (/ 5 3)
 PRINT (+ (YIELD 5) (YIELD 3))
 PRINT (+ (/ 15 3) (- 120 (* 4 5)))
+PRINT true
 #(DEFINE func (LIST x y z) (+ (+ x y) z))
 #(DEFINE proceed {
 #  (PRINT "began example procedure")
